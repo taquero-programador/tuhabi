@@ -17,6 +17,6 @@ def get_db():
         db.close()
 
 
-@app.get("inmuebles/", response_model=list[schemas.Inmo])
+@app.get("/inmuebles/", response_model=list[schemas.Inmo])
 def read_inmos(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     return crud.get_inmo(db, skip=skip, limit=limit)

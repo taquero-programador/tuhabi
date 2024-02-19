@@ -4,13 +4,14 @@ from pydantic import BaseModel
 
 
 class InmuebleBase(BaseModel):
-    municipio:str
+    id: int
+    municipio: str
     fraccionamiento: str
     model: str
     address: str
-    price: str
-    ground_area: str
-    area: str
+    price: int | None
+    ground_area: int | None
+    area: int | None
     bathrooms: str
     rooms: str
     parkings: str
@@ -23,5 +24,5 @@ class InmuebleCreate(InmuebleBase):
 class Inmo(InmuebleBase):
     municipio: str
 
-    class Config:
-        orm_mode = True
+    class ConfigDict:
+        from_attributes = True

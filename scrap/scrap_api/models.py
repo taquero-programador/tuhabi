@@ -1,20 +1,21 @@
 #!/usr/bin/env python
 
-from sqlalchemy import Column, String
+from sqlalchemy import Column, Text, Integer
 from database import Base
 
 
 class Inmo(Base):
-    __table__ = "inmuebles"
+    __tablename__ = "inmuebles"
 
-    municipio = Column(String)
-    fraccionamiento = Column(String)
-    model = Column(String)
-    address = Column(String)
-    price = Column(String)
-    ground_area = Column(String)
-    area = Column(String)
-    bathrooms = Column(String)
-    rooms = Column(String)
-    parkings = Column(String)
+    id = Column(Integer, primary_key=True, index=True)
+    municipio = Column(Text)
+    fraccionamiento = Column(Text)
+    model = Column(Text)
+    address = Column(Text)
+    price = Column(Integer)
+    ground_area = Column(Integer)
+    area = Column(Integer)
+    bathrooms = Column(Text)
+    rooms = Column(Text)
+    parkings = Column(Text)
 

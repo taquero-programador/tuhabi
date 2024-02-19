@@ -4,7 +4,8 @@ from sqlalchemy.orm import Session
 from models import Inmo
 
 
-def get_inmo(db: Session, skip: int = 0, limit: int = 100):
+# get all inmos
+def get_inmo(db: Session, skip: int=0, limit: int=100):
     return db.query(Inmo).offset(skip).limit(limit).all()
 
 
