@@ -33,3 +33,9 @@ def read_fracc_in_inmo(municipio: str, db: Session=Depends(get_db)):
 @app.get("/inmuebles/{municipio}/{fraccionamiento}", response_model=list[schemas.Inmo])
 def read_inmos_by_fracc(municipio: str, fraccionamiento: str, db: Session=Depends(get_db)):
     return crud.get_inmo_by_fracc(db, municipio=municipio, fraccionamiento=fraccionamiento)
+
+
+# get model from inmo
+@app.get("/inmuebles/{municipio}/{fraccionamiento}/{model}", response_model=list[schemas.Inmo])
+def get_model_from_inmo(municipio: str, fraccionamiento: str, model: str, db: Session=Depends(get_db)):
+    return crud.get_model(db, municipio=municipio, fraccionamiento=fraccionamiento, model=model)
