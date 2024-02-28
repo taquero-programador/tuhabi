@@ -22,4 +22,4 @@
 
 #settings = Settings()
 
-DATABASE_URL = "sqlite:///./inmubles.db"
+DATABASE_URL = "sqlite:///./inmo.db"

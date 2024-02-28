@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 
 # from config import DATABASE_URL
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./inmubles.db"
+SQLALCHEMY_DATABASE_URL = "sqlite:///./inmo.db"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
