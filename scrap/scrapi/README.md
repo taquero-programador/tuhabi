@@ -13,7 +13,7 @@ Clonar el repositorio:
 https://github.com/taquero-programador/tuhabi.git
 ```
 
-Entrar al directorio y ejecutar:
+Entrar al directorio `tuhabi/scrap/scrapi` y ejecutar:
 ```bash
 jupyter notebook --no-browser --autoreload
 ```
